@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="open_win">查看浏览器信息</button>
+		
+		<script>
+			var new_win;
+			function open_win(){
+				new_win=window.open("1.dom.html","浏览器信息","height=450,width=450")
+					
+			document.write("<p> 浏览器：");
+			document.write(navigator.appName+"</p>")
+			document.write("<p> 浏览器版本：")
+			document.write(navigator.appVersion+"</p>")
+			document.write("<p>浏览器的用户代理报头：")
+			document.write(navigator.userAgent+"</p>")
+			document.write("<p>平台：")
+			document.write(navigator.platform+"</p>")
+				}
+			
+			
+		</script>
+	</body>
+</html>

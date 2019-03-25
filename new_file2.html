@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p id="toDoSth">待办事项</p>
+		<!--<div id="test" title="文本">这是一些文本内容</div>
+        	
+            	<div id="demo">我是文本节点</div>
+            <div id="demo"></div>
+            <h2 id="toDoSth">待办事项</h2>
+            <ul id="uls">
+            	<li class="item">打扫卫生</li>
+            	<li class="item">给tom打电话</li>
+            	<li class="item">看电影</li>
+            </ul>-->
+            <ul id="uls">
+            	<li id="li1">我是第一个li</li>
+            	<li>我是第二个li</li>
+            	<li>我是第三个li</li>
+            </ul>
+		<script>
+			/*var demo=document.getElementById("demo");
+			console.log("<div>标签的节点名称："+demo.nodeName);
+			console.log("<div>标签内文本节点的名称："+demo.firstChild.nodeName);
+			console.log("文档节点的节点名称："+document.nodeName);
+			var demo=document.getElementById("demo");
+			console.log("文本节点的节点值："+demo.firstChild.nodeValue);
+			var demo=document.getElementById("demo");
+			alert("获取到的节点是："+demo+"\n"+"节点类型是："+demo.nodeType+"\n"+"节点名称是："+demo.nodeName);
+			var ele=document.getElementById("uls");
+			var lis=ele.getElementsByTagName("li");
+			var txt="";
+			for (var i=0;i<lis.length;i++) {
+				txt+="第"+(i+1)+"li里的文本是："+lis[i].firstChild.nodeValue+"\n";
+				
+			}
+			alert(txt);
+			var items=document.getElementsByClassName("item");
+			var txt="";
+			for (var i=0;i<items.length;i++){
+				txt+="第"+(i+1)+"个item里的文本是："+items[i].firstChild.nodeValue+"\n";
+			}alert(txt);
+			
+			var test=document.getElementById("test");
+			alert(test.getAttribute("title"));
+			var ele=document.getElementById("toDoSth");
+			console.log(ele.getAttribute("title"));
+			ele.setAttribute("title","a list of goods");
+			console.log(ele.getAttribute("title"));*/
+			var uls=document.getElementById("uls");
+			var li=document.createElement("li");
+			var li1=document.getElementById("li1");
+			var txt=document.createTextNode("我是被新创建的li");
+			//uls.appendChild(li);
+			//uls.insertBefore(li,uls.firstChild);
+			
+			uls.removeChild(li1);
+			li.appendChild(txt)
+			
+		</script>
+	</body>
+</html>
