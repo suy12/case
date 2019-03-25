@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			a{
+				color: chocolate;
+			text-decoration: none;	
+			}
+			.header{
+				width: 100%;
+				height: 60px;
+				background-color: black;
+			}
+			.header .container{
+				width: 1000px;
+				height: 60px;
+				background-color: brown;
+				margin:0px auto;
+			}
+		.header .container	a{
+				float: left;
+				width: 200px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+			}
+			.header .container a.active{
+				background-color: #808080;
+				color: wheat;
+			}
+			.body{
+				width: 100%;
+				height: 200px;
+				background-color: palevioletred;
+			}
+			.body .item{
+				width: 100%;
+				height: 200px;
+				display: none;
+			}
+			.header .container a:hover{
+				background:#808080;
+				color: wheat;
+			}
+		</style>
+		<script>
+			/*window.onload=function(){
+				var links=document.getElementsByTagName("a");
+				var items=document.getElementsByClassName("item");
+				for (var i=0;i<links.length;i++) {
+					(function(i){
+						links[i]=i;
+						links[i].onclick=function  () {
+							//清除所有
+							for (var j=0;j<links.length;j++) {
+								//清除样式
+								links[j].className="";
+								//隐藏div
+								items[j].style.display="none";
+								
+							}
+							//添加首页样式
+							links[i].className="active";
+							
+							items[i].style.display="block";
+						}
+					})(i)
+				}
+			}*/
+			window.onload=function(){
+				var links=document.getElementsByTagName("a");
+				var items=document.getElementsByTagName("item");
+				for (var i=0; i<links.length;i++) {
+					(function(i){
+						links[i]=i;
+						links[i].onclick=function(){
+							for(var j=0;j<links.length;j++){
+								links[j].className="";
+								items[j].style.display="none";
+							}
+							links[i].className="active";
+							items[i].style.display="block";
+						}
+					})(i)
+					
+				}
+			}
+			
+			window.onload=function(){
+				var links=document.getElementsByTagName("a");
+				var items=document.getElementsByTagName("item");
+				for (var i=0;i<links.length;i++) {
+					(function  (i) {
+						links[i]=i;
+						links[i].onclick=function(){
+							for (var j=0; j<links.length;j++) {
+								links[j].className=""
+								items[j].style.display="none";
+							}
+							links[i].className="active";
+							items[i].style.display="block"
+						}
+						
+					})(i)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="header">
+			<div class="container">
+				<a href="#" class="active">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+				<a href="#">首页</a>
+			</div>
+			<div class="body">
+				<div class="item" style="display: block;">12333</div>
+				<div class="item">25866334</div>
+				<div class="item">1111111111</div>
+				<div class="item">122222222222222222</div>
+				<div class="item">3333333333</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.clock{
+				width: 600px;
+				height: 600px;
+				margin: 0px auto;
+				background:url(img1/clock.jpg) ;
+				position: relative;
+				
+			}
+			.clock div{
+				width: 600px;
+				height: 600px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#hour{
+				background: url(img1/hour.png)  no-repeat center center;
+			}
+			#minute{
+				background: url(img1/minute.png)  no-repeat center center;
+			}
+			#second{
+				background: url(img1/second.png)  no-repeat center center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="clock">
+			<div id="hour"></div>
+			<div id="minute"></div>
+			<div id="second"></div>
+			
+		</div>
+		<script>
+			window.onload=function  () {
+				var hourzhen=document.getElementById("hour");
+				var minutezhen=document.getElementById("minute");
+				var secondzhen=document.getElementById("second");
+				function clock(){
+				var date=new Date();
+				var ms=date.getMilliseconds();
+				var second=date.getSeconds()+ms/1000;
+				var minute=date.getMinutes()+second/60;
+				var hour=date.getHours()%12+minute/60;
+				
+				
+				//console.log(hour,minute,second);
+				hourzhen.style.webkitTransform="rotate("+hour*30+"deg)"
+				minutezhen.style.webkitTransform="rotate("+minute*6+"deg)"
+				secondzhen.style.webkitTransform="rotate("+second*6+"deg)"
+			}
+			setInterval(clock,1000);
+			}
+		</script>
+	</body>
+</html>

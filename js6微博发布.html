@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			label{
+				vertical-align: top;
+			}
+			textarea{
+				widows: 100px;
+				height: 40px;
+			}
+			button{
+				vertical-align: top;
+				border-radius:20px ;
+				background-color: yellow;
+				width: 150px;
+				height: 50px;
+			}
+			div{
+				width: 400px;
+				height: 400px;
+				background-color: #ccc;
+				border: 2px solid gray;
+				overflow: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<label>张三：</label>
+		<textarea name="message"></textarea>
+		<button>提交</button>
+		<div></div>
+		<script>
+			/*var btn=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			btn.onclick=function(){
+			var val=document.getElementsByTagName("textarea")[0].value;
+			div.innerHTML+="张三："+val+"</br>";
+			var val=document.getElementsByTagName("textarea")[0].value="";
+			}
+			var btn=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			btn.onclick=function(){
+				var val=document.getElementsByTagName("textarea")[0].value;
+				div.innerHTML+="张三："+val+"<br/>";
+				var val=document.getElementsByTagName("textarea")[0].value="";
+			}
+			var but=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			but.onclick=function(){
+				var val=document.getElementsByTagName("textarea")[0].value;
+				div.innerHTML+="张三："+val+"<br/>"
+				var val=document.getElementsByTagName("textarea")[0].value="";
+			}*/
+			/*var but=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			but.onclick=function(){
+				var val=document.getElementsByTagName("textarea")[0].value;
+				div.innerHTML+="张三："+val+"<br/>";
+				var val=document.getElementsByTagName("textarea")[0].value="";
+			}*/
+			var but=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			but.onclick=function(){
+				var val=document.getElementsByTagName("textarea")[0].value;
+				div.innerHTML+="张三"+val+"<br/>";
+				var val=document.getElementsByTagName("textarea")[0].value="";
+			}
+			
+			
+			var  but=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			window.onload=function  () {
+				but.onclick=function  () {
+					var  val=document.getElementsByTagName("textarea")[0].value;
+					div.innerHTML="张三"+val+"<br/>";
+					var val=document.getElementsByTagName("textarea")[0].value="";	
+				}
+			}
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+<ml>
+

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--
+        	作者：offline
+        	时间：2019-03-18
+        	描述：
+       <style>
+			li:nth-child(2n){
+				background-color: yellow;
+			}
+			li:nth-child(2n+1){
+				background-color: red;
+			}
+			li:hover{
+				background-color: chocolate;
+			}
+		</style> -->
+	</head>
+	<body>
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+		</ul>
+		<script>
+			/*window.onload=function(){
+				var lis=document.getElementsByTagName("li");
+				for (var i=0;i<lis.length;i++) {
+					if (i%2==0) {
+						lis[i].style.backgroundColor="red";
+					} else{
+						lis[i].style.backgroundColor="yellow";
+					}
+					(function(i){
+						//鼠标移到目标上
+						lis[i].onmouseover=function(){
+							lis[i].style.backgroundColor="hotpink";
+						}
+						//鼠标移开
+						lis[i].onmouseout=function(){
+							if (i%2==0) {
+						lis[i].style.backgroundColor="red";
+					} else{
+						lis[i].style.backgroundColor="yellow";
+					}
+						}
+					})(i)
+					
+					
+					
+				}
+			}*/
+			
+			window.onload=function  () {
+				var li1=document.getElementsByTagName("li");
+				for (var i=0;i<li1.length;i++) {
+					if(i%2==0){
+						li1[i].style.backgroundColor="red"
+						
+					}
+					else{
+					li1[i].style.backgroundColor="yellow"
+					}
+					(function (i) {
+						li1[i].onmousemove=function(){
+							li1[i].style.backgroundColor="chartreuse"
+						}
+						li1[i].onmouseout=function  () {
+							if(i%2==0){
+						li1[i].style.backgroundColor="red"
+						
+					}
+					else{
+					li1[i].style.backgroundColor="yellow"
+					}
+						}
+					})(i)
+				}
+				
+			}
+		</script>
+	</body>
+</html>

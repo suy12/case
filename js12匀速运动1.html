@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+				top: 30px;
+				left: 0px;
+			}
+			/*button:hover+.one{
+				left: 400px;
+				transition:left  3s linear; 
+			}*/
+		</style>
+	</head>
+	<body>
+		<button >点击</button>
+		<div class="one"></div>
+		<script>
+			var btn=document.getElementsByTagName("button")[0];
+			var div=document.getElementsByTagName("div")[0];
+			var num=0;
+			var target=400;
+			btn.onclick=function(){
+				//匀速   setInterval间歇调用setInterval(函数,时间毫秒)
+//				var timer=setInterval(function  () {
+//					if (num<400) {
+//						num++;
+//						div.style.left=num+"px";
+//						
+//					}else{
+//						clearInterval(timer);
+//					}
+//				},30)
+				//减速
+				setInterval(function(){
+					num=num+(target-num)/10;
+					div.style.left=num+"px"
+				},30)
+				
+			}
+				
+		</script>
+	</body>
+</html>
