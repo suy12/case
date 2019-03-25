@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//后置++
+			var i=0;
+			var num=i++;
+			console.log(i);
+			console.log(num);
+			//++前置
+			var n=0;
+			var num1=++n;
+			console.log(n);
+			console.log(num1);
+			
+			var number=10;
+			console.log(++number);
+			console.log(number++);
+			
+			var number1=20;
+			console.log((number1++)+(++number1)+(number1))
+			
+			var wc=15;
+			var v=(wc++)+wc+(wc++);
+			//后置--
+			var n1=19;
+			var aa=n--;
+			console.log(aa);
+			console.log(n1);
+			
+			var n2=19;
+			var bb=--n2;
+			console.log(bb);
+			console.log(n2);
+			
+			var aaa=28;
+			var ccc=(aaa--)+(++aaa)+(aaa++);
+			console.log(aaa);
+			console.log(ccc);
+			
+			//+ 如果表达式中有一个是字符串，就拼接
+			var a=1+2;
+			var a="1"+2;
+			var a=2+"1";
+			var a=NaN+'1';
+			var a=Infinity+'1';
+			console.log(a);
+			
+			//-先对减号两边的值进行Number()转换
+			var a=10-1;
+			var a=10-'1';
+			console.log(a);
+			//*
+			  var a=10*'10';
+			  console.log(a);
+			  // /
+			  var a=100/0;
+			  console.log(a);
+			  //%
+			  var a=10%'3';
+			  console.log(a);
+			 
+			 //<  比较结束后，返回true或者false
+			 console.log(1<4<8);//true
+			 //如果< 左右两边都是字符串的时候，转换为ASCII来比较
+			 console.log('A'<'a');//true
+			 //如果其中有一个数值，则先进行转换，在比较
+			 console.log(89<"a")//false
+			 //==只比较数值
+		</script>
+	</body>
+</html>
